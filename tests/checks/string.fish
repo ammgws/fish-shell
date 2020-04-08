@@ -98,6 +98,9 @@ string split --fields=3,2 "" abc
 string split --fields=2,9 "" abc; or echo "exit 1"
 # CHECK: exit 1
 
+string split --allow-empty --fields=2,9 "" abc
+# CHECK: b
+
 string split --fields=1-3,5,9-7 "" 123456789
 # CHECK: 1
 # CHECK: 2
